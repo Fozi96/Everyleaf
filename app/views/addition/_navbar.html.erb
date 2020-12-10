@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+
+   <nav class="navbar navbar-light bg-light">
+    <a <%= link_to "Everlee", root_path, class: "navbar-brand "   %>
+   </a>
+    </nav>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+     <li  class="nav-item">
+       <%= link_to 'New Task', new_task_path, class: "  btn btn-danger rounded-pill " %>
+</li>
+
+  <li class="nav-item">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort by
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" href="#"><%= link_to 'Sort by Priority', tasks_path(sort_priority: 'true') , class: "nav-link " %></a>
+        <a class="dropdown-item" href="#"><%= link_to 'Sort by deadline', tasks_path(sort_deadline: 'true') , class: "nav-link " %></a>
+      </div>
+    </div>
+  </div>
+  </li>
+
+    </div>

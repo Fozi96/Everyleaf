@@ -1,0 +1,22 @@
+<div class="mx-4 px-4 bg-light">
+<p id="notice"><%= notice %></p>
+
+
+<%= @task.created_at.strftime("%Hh%M min %Y, %B, %d") %>
+<h5 class="my-2">
+  <strong><%= @task.title %></strong>
+</h5>
+<p>This task is scheduled to start on <strong><%= @task.start_at.strftime("%B, %d, %Y") %></strong> and it must end before <strong><%= @task.end_at.strftime("%B, %d, %Y") %></strong><p>
+<h6 class="mx-2 bg-white p-2">
+  <%= @task.content %>
+</h6>
+<p>
+  <strong>Status: </strong>
+  <%= @task.status %><br>
+  <strong>Priority:</strong>
+  <%= @task.priority %>
+</p>
+
+
+<button class="btn btn-outline-primary"><%= link_to 'Edit', edit_task_path(@task) %></button>
+</div>
